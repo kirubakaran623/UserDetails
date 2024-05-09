@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block body%}
+
+<style>
+    body{
+        text-align: center;
+        background-color: lightgoldenrodyellow;
+        background-repeat: no-repeat;
+    }
+    div{
+        align-items: center;
+        margin-top: 4rem;
+    }
+    a{
+        margin-bottom: 2rem;
+        
+    }
+.btn{
+    font-size: 1.5rem;
+    padding: 1rem 6rem;
+    border-radius: 3rem;
+}
+    h1{
+        margin-bottom: 4rem;
+        font-size: 4rem;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+</style>
+
+
+<div style="text-align:center;">
+    <h1>Student Details</h1>
+    <a href="{{url_for('login')}}" class="btn btn-success">Login</a> <br>
+    <a href="{{url_for('signup')}}" class="btn btn-success">signup</a>
+</div>
+
+{% endblock body%}

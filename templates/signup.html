@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{%block body%}
+
+ <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    form{
+        margin-top: 4rem ;
+        background: linear-gradient(to bottom, rgb(0, 70, 23),rgb(2, 184, 2),rgb(0, 70, 23));
+        padding: 6rem 0;
+        border-radius:1rem;
+        box-shadow: 5px 5px 15px 0px black ;
+
+    }
+    b{
+        color: rgb(185, 253, 185);
+    }
+    form h1{
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+    form table tr td a{
+        text-align:right;
+    }
+    table tr td{
+        padding: 1rem;
+    }
+ </style>
+
+ <div class="col-4 mx-auto">
+    
+    <form action=""method="post">
+        <h1>Signup</h1>
+        {{form.hidden_tag()}}
+        <table>
+            <tr>
+                <td><b>{{form.username.label}}</b></td>
+                <td>{{form.username()}}</td>
+            </tr>
+            <tr>
+                <td><b>{{form.password.label}}</b></td>
+                <td>{{form.password()}} </td>
+            </tr>
+            <tr>
+                <td>{{form.submit()}}</td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+{%endblock body%}

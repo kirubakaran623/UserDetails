@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{%block body%}
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        
+    }
+    form{
+        margin-top: 2rem ;
+        background: linear-gradient(to bottom, rgb(0, 70, 23),rgb(2, 184, 2),rgb(0, 70, 23));
+        padding: 5rem 0;
+        border-radius:1rem;
+        width: 33%;
+        box-shadow: 5px 5px 15px 0px black ;
+    }
+    td label{
+        color: white;
+    }
+    form h1{
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+    form table tr td a{
+        text-align:right;
+    }
+    table tr td{
+        padding: 1rem;
+    }
+    input{
+        outline: none;
+        width: 13rem;
+    }
+</style>
+<center>
+<form action='/insert' method="post">
+    <h1>Add Detail</h1>
+    <table>
+        <tr>
+            <td><label for="Name">Name : </label></td>
+            <td><input type="text" name="Name"></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="Age">Age : </label></td>
+            <td><input type="text" name="Age"></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="Email">Email : </label></td>
+            <td><input type="text" name="Email"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="submit" class="btn btn-success"></td>
+        </tr>
+    </table>
+</form>
+</center>
+{%endblock body%}
